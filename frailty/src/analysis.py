@@ -31,7 +31,7 @@ summary_stats.to_csv("results/summary_statistics.txt")
 correlation_matrix = df.corr()
 correlation_matrix.to_csv("results/correlation_matrix.txt")
 
-print("✅ Data analysis completed. Results saved.")
+print(" Data analysis completed. Results saved.")
 
 # Ensure correct column name for plotting
 if "grip strength" in df.columns:
@@ -41,7 +41,7 @@ elif "grip_strength" in df.columns:
 else:
     raise KeyError("Column 'Grip Strength' not found. Check CSV headers.")
 
-# ✅ Bar Plot: Average Grip Strength by Frailty Status
+# Bar Plot: Average Grip Strength by Frailty Status
 plt.figure(figsize=(6, 4))
 sns.barplot(x=df["frailty"], y=df[grip_strength_col], estimator=lambda x: x.mean(), ci=None)
 plt.title("Average Grip Strength by Frailty Status")
@@ -55,4 +55,4 @@ bar_plot_path = "results/average_grip_strength_frailty.png"
 plt.savefig(bar_plot_path)
 plt.show()
 
-print("✅ Bar plot saved in 'results/' directory.")
+print(" Bar plot saved in 'results/' directory.")
