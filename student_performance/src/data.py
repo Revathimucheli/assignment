@@ -34,7 +34,7 @@ summary_stats.to_csv("results/summary_statistics.txt")
 correlation_matrix = df.corr()
 correlation_matrix.to_csv("results/correlation_matrix.csv")
 
-print("✅ Data analysis completed. Results saved.")
+print(" Data analysis completed. Results saved.")
 
 # 🔹 **Additional Analysis**
 # Finding the highest and lowest scoring students
@@ -66,7 +66,7 @@ with open("results/analysis_summary.txt", "w") as f:
     f.write(f"Lowest Writing Score: {lowest_writing_score['writing_score']} (Student ID: {lowest_writing_score.name})\n")
     f.write(f"Average Writing Score: {average_writing_score:.2f}\n\n")
 
-print("✅ Additional numerical analysis saved.")
+print("Additional numerical analysis saved.")
 
 # 📌 **Visualization 1: Box Plot - Math Score Distribution by Gender**
 plt.figure(figsize=(6, 4))
@@ -77,7 +77,7 @@ plt.ylabel("Math Score")
 plt.grid()
 plt.savefig("results/gender_math_score_distribution.png")
 plt.show()
-print("✅ Box Plot saved.")
+print(" Box Plot saved.")
 
 # 📌 **Visualization 2: Bar Chart - Parental Education Level vs Average Scores**
 plt.figure(figsize=(8, 4))
@@ -88,7 +88,7 @@ plt.xticks(rotation=45)
 plt.grid()
 plt.savefig("results/parental_education_vs_scores.png")
 plt.show()
-print("✅ Bar Chart saved.")
+print(" Bar Chart saved.")
 
 # 📌 **Visualization 3: Grouped Bar Chart - Test Preparation Course vs Average Scores**
 plt.figure(figsize=(6, 4))
@@ -99,7 +99,7 @@ plt.ylabel("Average Math Score")
 plt.grid()
 plt.savefig("results/test_prep_vs_avg_scores.png")
 plt.show()
-print("✅ Test Prep Bar Chart saved.")
+print(" Test Prep Bar Chart saved.")
 
 # 📌 **Visualization 4: Bar Chart - Lunch Type vs Average Scores**
 plt.figure(figsize=(6, 4))
@@ -110,7 +110,7 @@ plt.ylabel("Average Math Score")
 plt.grid()
 plt.savefig("results/lunch_type_vs_avg_scores.png")
 plt.show()
-print("✅ Lunch Type Bar Chart saved.")
+print("Lunch Type Bar Chart saved.")
 
 # 📌 **Visualization 5: Histogram - Math Score Distribution with Gender Comparison**
 plt.figure(figsize=(8, 4))
@@ -121,4 +121,4 @@ plt.ylabel("Frequency")
 plt.grid()
 plt.savefig("results/math_score_distribution_comparison.png")
 plt.show()
-print("✅ Histogram with Gender Comparison saved.")
+print(" Histogram with Gender Comparison saved.")
