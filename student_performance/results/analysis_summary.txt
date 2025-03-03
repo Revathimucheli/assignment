@@ -1,0 +1,15 @@
+Student Performance Analysis
+=============================
+
+Highest Math Score: 100 (Student ID: 149)
+Lowest Math Score: 0 (Student ID: 59)
+Average Math Score: 66.09
+
+Highest Reading Score: 100 (Student ID: 106)
+Lowest Reading Score: 17 (Student ID: 59)
+Average Reading Score: 69.17
+
+Highest Writing Score: 100 (Student ID: 106)
+Lowest Writing Score: 10 (Student ID: 59)
+Average Writing Score: 68.05
+
