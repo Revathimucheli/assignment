@@ -21,4 +21,4 @@ df["Frailty"] = df["Frailty"].map({"Y": 1, "N": 0})
 cleaned_file_path = "/content/cleaned_frailty_data.csv"
 df.to_csv(cleaned_file_path, index=False)
 
-print("✅ Data cleaning completed. Cleaned data saved at:", cleaned_file_path)
+print(" Data cleaning completed. Cleaned data saved at:", cleaned_file_path)
