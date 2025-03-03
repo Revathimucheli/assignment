@@ -28,4 +28,4 @@ for col in df.select_dtypes(include=["number"]).columns:
 cleaned_file_path = "/content/cleaned_student_performance.csv"
 df.to_csv(cleaned_file_path, index=False)
 
-print("✅ Data cleaning complete. Missing values replaced with mean. Cleaned data saved at:", cleaned_file_path)
+print(" Data cleaning complete. Missing values replaced with mean. Cleaned data saved at:", cleaned_file_path)
