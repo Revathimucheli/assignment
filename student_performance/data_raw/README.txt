@@ -3,3 +3,18 @@ Math Proficiency versus Gender                             finds outliers by com
 Exam Prep Course vs Results              determines whether test-prep classes enhance students' performance.
 Type of Lunch vs Scores                           investigates how socioeconomic status affects academic achievement (via lunch type).
  Distribution of Math Scores by Gender         displays the total score distribution when comparing students who are male and female.
+
+dataset information
+Column Names:
+gender
+race/ethnicity
+parental level of education
+lunch
+test preparation course
+math score
+reading score
+writing score
+
+Data Types:
+Categorical: gender, race/ethnicity, parental level of education, lunch, test preparation course
+Numerical: math score, reading score, writing score
