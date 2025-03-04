@@ -22,21 +22,21 @@ print("Available columns in dataset:", df.columns)
 # Ensure results directory exists
 os.makedirs("results", exist_ok=True)
 
-# 🔹 Convert categorical variables to numeric encoding
+#  Convert categorical variables to numeric encoding
 for col in df.select_dtypes(include=["object"]).columns:
     df[col] = df[col].astype("category").cat.codes
 
-# 🔹 Compute and save summary statistics
+#  Compute and save summary statistics
 summary_stats = df.describe()
 summary_stats.to_csv("results/summary_statistics.txt")
 
-# 🔹 Compute and save correlation matrix
+# Compute and save correlation matrix
 correlation_matrix = df.corr()
 correlation_matrix.to_csv("results/correlation_matrix.csv")
 
 print(" Data analysis completed. Results saved.")
 
-# 🔹 **Additional Analysis**
+# **Additional Analysis**
 # Finding the highest and lowest scoring students
 highest_math_score = df.loc[df["math_score"].idxmax()]
 lowest_math_score = df.loc[df["math_score"].idxmin()]
@@ -68,7 +68,7 @@ with open("results/analysis_summary.txt", "w") as f:
 
 print("Additional numerical analysis saved.")
 
-# 📌 **Visualization 1: Box Plot - Math Score Distribution by Gender**
+#  **Visualization 1: Box Plot - Math Score Distribution by Gender**
 plt.figure(figsize=(6, 4))
 sns.boxplot(x=df["gender"], y=df["math_score"])
 plt.title("Math Score Distribution by Gender")
@@ -79,7 +79,7 @@ plt.savefig("results/gender_math_score_distribution.png")
 plt.show()
 print(" Box Plot saved.")
 
-# 📌 **Visualization 2: Bar Chart - Parental Education Level vs Average Scores**
+# **Visualization 2: Bar Chart - Parental Education Level vs Average Scores**
 plt.figure(figsize=(8, 4))
 df.groupby("parental_level_of_education")[["math_score", "reading_score", "writing_score"]].mean().plot(kind="bar")
 plt.title("Parental Education Level vs Average Scores")
@@ -90,7 +90,7 @@ plt.savefig("results/parental_education_vs_scores.png")
 plt.show()
 print(" Bar Chart saved.")
 
-# 📌 **Visualization 3: Grouped Bar Chart - Test Preparation Course vs Average Scores**
+# **Visualization 3: Grouped Bar Chart - Test Preparation Course vs Average Scores**
 plt.figure(figsize=(6, 4))
 sns.barplot(x=df["test_preparation_course"], y=df["math_score"], estimator=lambda x: x.mean(), ci=None)
 plt.title("Test Preparation Course vs Math Score")
@@ -101,7 +101,7 @@ plt.savefig("results/test_prep_vs_avg_scores.png")
 plt.show()
 print(" Test Prep Bar Chart saved.")
 
-# 📌 **Visualization 4: Bar Chart - Lunch Type vs Average Scores**
+# **Visualization 4: Bar Chart - Lunch Type vs Average Scores**
 plt.figure(figsize=(6, 4))
 sns.barplot(x=df["lunch"], y=df["math_score"], estimator=lambda x: x.mean(), ci=None)
 plt.title("Lunch Type vs Math Score")
@@ -112,7 +112,7 @@ plt.savefig("results/lunch_type_vs_avg_scores.png")
 plt.show()
 print("Lunch Type Bar Chart saved.")
 
-# 📌 **Visualization 5: Histogram - Math Score Distribution with Gender Comparison**
+# **Visualization 5: Histogram - Math Score Distribution with Gender Comparison**
 plt.figure(figsize=(8, 4))
 sns.histplot(data=df, x="math_score", hue="gender", bins=20, kde=True, palette="coolwarm", alpha=0.6)
 plt.title("Math Score Distribution by Gender")
